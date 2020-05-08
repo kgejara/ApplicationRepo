@@ -39,7 +39,14 @@ steps:
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/AnsibleScripts'
     OverWrite: true
-
+    
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'terraform-aws'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/terraform-aws'
+    OverWrite: true
+    
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
