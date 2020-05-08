@@ -16,7 +16,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- checkout: ApplicationRepo
+- checkout: self
 - checkout: AnsibleRepo
 - checkout: TerraformRepo
 
