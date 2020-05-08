@@ -28,21 +28,21 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'Code'
+    SourceFolder: 'ApplicationRepo/Code'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/Code'
     OverWrite: true
     
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'AnsibleScripts'
+    SourceFolder: 'AnsibleRepo/AnsibleScripts'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/AnsibleScripts'
     OverWrite: true
     
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'terraform-aws'
+    SourceFolder: 'TerraformRepo/terraform-aws'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/terraform-aws'
     OverWrite: true
