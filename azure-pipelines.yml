@@ -15,3 +15,16 @@ steps:
 - checkout: ApplicationRepo
 
 - script: dir $(Build.SourcesDirectory)
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'Code'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/Code'
+    OverWrite: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
