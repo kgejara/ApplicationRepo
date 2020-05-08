@@ -1,9 +1,5 @@
 resources:
   repositories:
-  - repository: ApplicationRepo
-    type: github
-    endpoint: github.com_kgejara
-    name: kgejara/ApplicationRepo
   - repository: AnsibleRepo
     type: github
     endpoint: github.com_kgejara
