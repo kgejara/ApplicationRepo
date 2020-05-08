@@ -35,9 +35,9 @@ steps:
     
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'Code'
+    SourceFolder: 'AnsibleScripts'
     Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/Code'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/AnsibleScripts'
     OverWrite: true
 
 - task: PublishBuildArtifacts@1
